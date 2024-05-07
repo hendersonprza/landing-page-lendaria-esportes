@@ -1,0 +1,844 @@
+   
+/* Fonte do projeto */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); 
+    
+    /* Estilização do nosso web*/
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none; 
+        border: none;
+        text-decoration: none;
+        font-family: "Indie Flower", cursive;
+    }
+
+/*O HTML poderá pegar toda a width(largura) e height(altura) da tela do usuário*/
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%; /*Fica mais fácil em questões responsivas nesse valor*/
+    overflow-x: hidden;
+}
+
+
+/*Menu*/
+.content {
+    z-index: 1;
+    width: 100vw;
+    height: 60px;
+    display: flex; /*display: flex; para ficar um item do lado do outro*/
+    justify-content: space-around; /*justify-content: space-around; espaçamento os itens*/
+    align-items: center; /* align-items: para alinhar em vertical*/
+    background-color: rgba(30, 31, 30, 0.8);
+    position: fixed;
+    transition: 200ms;
+}
+.logo{
+    width: 70px;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo h3{
+    display: flex;
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    font-size: 1.6rem;
+}
+
+.content .list-menu {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.content .list-menu li a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ padding-top: 3rem;
+ padding-right: 1rem;
+ padding-bottom: 2rem;
+ padding-left: 1rem;
+ color: white;
+ font-size: 1.8rem;
+text-transform: uppercase;
+transition: 0.6s;
+}
+
+.content .list-menu li a:hover {
+    font-size: 2rem;
+    border-bottom: 4px solid #F2D022;;
+    background-color: #1f1f1f
+    
+}
+
+/*first-section*/
+
+
+.first-section {
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(14,14, 14, 1), rgba(95, 84, 26, 1), rgba(30,25,20,1));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.first-section .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section h1 {
+    font-size: 8rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.first-section h2 {
+    font-size: 5rem;
+    color: black;
+    margin-bottom: 3rem;
+}
+
+.btn button {
+    font-size: 1.8rem;
+    width: 250px;
+    text-decoration: none;
+    height: 60px;
+    cursor: pointer;
+    background-color: #F2D022;
+    border-radius: 10px;
+    color: black;
+    transition: all ease-in 300ms;
+}
+.btn button a {
+    text-decoration: none;
+}
+
+.btn button:hover{
+    scale:0.95;
+    background-color: transparent;
+    border: 1px solid #F2D022;;
+}
+
+.btn {
+    width: 520px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*section catalogo*/
+
+
+.catalogo {
+     background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(30,25,20,1), rgba(95, 84, 26, 1), rgba(14,14,14,1));
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.catalogo h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+}
+
+.itens-catalogo {
+    width: 80%;
+    margin: 2rem 0 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.itens-catalogo .info{
+    background-color: rgb(221, 211, 211);
+    color: #0D0D0D;
+    text-decoration: none;
+    border: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+.itens-catalogo .info h3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.itens-catalogo .info h4 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: .2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.itens-catalogo .info h5 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1.7rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.itens-catalogo #card {
+    z-index: 0;
+    height: 300px;
+    width: 350px;
+    background-color: transparent;
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+/*.itens-catalogos produtos*/
+
+.itens-catalogo .futebol img {
+    background-image: url(./assets/camisa-gremio.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.itens-catalogo .futebol img:hover{
+    background-image: url('./assets/camisa-gremio2.png');
+    background-clip: padding-box;
+}
+
+
+.itens-catalogo .nba img {
+    scale: 1.4;
+    height: auto;
+    background-image: url('./assets/nba-frente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .2s;
+}
+
+.itens-catalogo .nba img:hover{
+    background-image: url('./assets/nba-verso.png');
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.itens-catalogo .feminino img {
+    scale: 1.2;
+    height: auto;
+    background-image: url('./assets/feminina-frente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .2s;
+}
+
+.itens-catalogo .feminino img:hover{
+    background-image: url('./assets/feminina-verso.png');
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.itens-catalogo .kit-infantil img {
+    scale: 1.3;
+    height: auto;
+    background-image: url(./assets/infantil.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-position-y: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .5s;
+}
+
+.itens-catalogo .kit-infantil img:hover{
+    scale: 1.2;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.itens-catalogo .shorts img {
+    height: auto;
+    background-image: url('./assets/short-frente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .2s;
+}
+
+.itens-catalogo .shorts img:hover{
+    background-image: url('./assets/short-verso.png');
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.itens-catalogo .corta-vento img {
+    scale: 1.2;
+    height: auto;
+    background-image: url('./assets/cortavento-frente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .4s;
+}
+
+.itens-catalogo .corta-vento img:hover{
+    background-image: url('./assets/cortavento-verso.png');
+    background-position-y: center;
+    background-position-x: -5px;
+}
+
+.itens-catalogo .manga-longa img {
+    height: auto;
+    background-image: url('./assets/manga-longa-frente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .5s;
+}
+
+.itens-catalogo .manga-longa img:hover {
+    background-image: url('./assets/manga-longa-verso.png');
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.itens-catalogo .retro img {
+    height: auto;
+    background-image: url('./assets/retro-frente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .5s;
+}
+
+.itens-catalogo .retro img:hover {
+    background-image: url('./assets/retro-verso.png');
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.itens-catalogo .kit-treino img {
+    height: auto;
+    background-image: url('./assets/kit-treino-frente.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    margin: 0 .5rem 0 .5rem;
+    width: 100%;
+    transition: .5s;
+}
+
+.itens-catalogo .kit-treino img:hover {
+    background-image: url('./assets/kit-treino-verso.png');
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/**.itens-catalogo .info*/
+
+.itens-catalogo .info .catalogo-pdf {
+    text-decoration: none;
+    padding-left: 1rem;
+    border-radius: 5px;
+    color: black;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 200px;
+    height: 35px;
+    margin-top: 2rem;
+    background-color: #ffc506;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.itens-catalogo .info .catalogo-pdf:hover{
+    color: antiquewhite;
+    border: 2px solid #ffc506;
+    background-color: #5F541A;
+}
+
+ 
+
+/*section sobre-nos*/
+
+.sobre-nos {
+    width: 100%;
+    color: white;
+    background-color:  rgba(14,14, 14, 1);
+    display: flex;
+    padding-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-sobre h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.content-sobre p{
+    font-size: 3rem;
+    width: 500px;
+
+}
+.sobre-nos img {
+    width: 400px;
+    height: auto;
+    margin: 10rem 10rem 0 10rem;
+    border: 2px solid black;
+}
+
+/*contatos*/
+
+
+.contatos {
+    width: 100%;
+    background-color: rgba(14,14, 14, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    padding-bottom: 4rem;
+}
+
+.contatos h3 {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+}
+
+.contatos-secao{
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.contatos-secao i {
+    margin-right: .2rem;
+}
+
+.contatos-secao div a {
+    color: white;
+    cursor: pointer;
+    transition: 200ms ease-in;
+}
+
+.contatos-secao div i, span {
+    text-decoration: none;
+}
+
+.contatos-secao div:hover{
+    color: #ffc506;
+}
+
+/* responsividade */
+
+@media (max-width: 1200px) {
+    .content {
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-section .main {
+        text-align: center;
+    }
+
+    .first-section h1 {
+        font-size: 5.2rem;
+    }
+
+    .catalogo h2 {
+        font-size: 5rem;
+    }
+
+        .itens-catalogo {
+            width: 65%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sobre-nos .main {
+            display: grid;
+            justify-content: center;
+        }
+
+        .content-sobre h2 {
+            font-size: 5rem;
+        }
+
+        .sobre-nos .main .content-sobre p{
+            font-size: 2.5rem;
+            width: 700px;
+        }
+
+        .sobre-nos .main img{
+            width: 500px;
+        }
+
+        .contatos h3 {
+            font-size: 5rem;
+        }
+
+        .contatos-secao{
+            width: 500px;
+        }
+        
+
+        
+}
+
+@media (max-width: 992px) {
+
+    .first-section .main {
+        text-align: center;
+    }
+    
+
+    .first-section h1 {
+        font-size: 4rem;
+    }
+
+    .itens-catalogo {
+        width: 90%;
+        margin: 2rem 0 2rem 0;
+        gap: 15px;
+    }
+
+    .sobre-nos .main .content-sobre p{
+        font-size: 1.8rem;
+        width: 600px;
+    }
+
+    .sobre-nos .main img{
+        width: 400px;
+    }
+
+    .contatos h3 {
+        font-size: 4rem;
+    }
+
+
+    .contatos-secao{
+        width: 400px;
+    }
+
+
+
+    .contatos-secao span{
+        font-size: 1.7rem;
+    }
+    
+
+    
+}
+
+@media (max-width: 772px) {
+    html{
+        font-size: 60%;
+    }
+
+    .content {
+        display: flex;
+        height: 12%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .content .list-menu{
+        display: none;
+    }
+
+    .first-section .main {
+        text-align: center;
+    }
+
+    .first-section .main h1 {
+        font-size: 3.1rem;
+        width: 450px;
+    }
+
+    .first-section .main h2 {
+        font-size: 2.4rem;
+    }
+
+    .first-section .btn {
+        height: 150px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .one,
+    .two,
+    .three {
+        width: 80%;
+        height: 2px;
+        background-color: white;
+        margin: 6px auto;
+        transition-duration: 0.5s;
+    }
+
+    .menu-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content.on {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(30, 31, 30, 0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content.on .logo{
+        display: none;
+    }
+
+    .content.on .menu-toggle {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .content.on .list-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content.on .list-menu li {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content.on .list-menu li a {
+        font-size: 2rem;
+    }
+
+    .content.on .menu-toggle .two{
+        opacity: 0;
+    }
+
+    .content.on .menu-toggle .one {
+        transform: rotate(45deg) translate(5px, -8px);
+    }
+
+    .content.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(20px, -6px);
+    }
+
+
+
+    .itens-catalogo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .itens-catalogo .futebol img {
+        margin: 0;
+    }
+
+     
+    .itens-catalogo .feminino img {
+        margin: 0;
+        scale: 1;
+    }
+
+    .itens-catalogo .kit-infantil img {
+        margin: 0;
+        scale: 1;
+    }
+    
+    .itens-catalogo .shorts img {
+        margin: 0;
+        scale: 1;
+    }
+
+    .itens-catalogo .corta-vento img {
+        margin: 0;
+        scale: 1;
+    }
+
+    .itens-catalogo .manga-longa img {
+        margin: 0;
+        scale: 1;
+    }
+
+    .itens-catalogo .retro img {
+        margin: 0;
+        scale: 1;
+    }
+
+    .itens-catalogo .kit-treino img {
+        margin: 0;
+        scale: 1;
+    }
+
+    .itens-catalogo .nba img {
+        margin: 0;
+        scale: 1;
+    }
+
+
+    .sobre-nos .main .content-sobre p {
+        margin: 0;
+        width: 500px;
+    }
+
+    .sobre-nos .main img {
+        margin: 2rem 0 2rem 0;
+        width: 300px;
+    }
+
+    .contatos .contatos-secao {
+        width: 350px
+    }
+
+}
+
+@media (max-width: 520px) {
+  
+    .first-section .main h1 {
+        font-size: 2.8rem;
+        width: 80%;
+    }
+
+    .first-section .main h2 {
+        font-size: 2rem;
+    }
+
+    .first-section .btn {
+        width: 200px;
+    }
+
+
+
+
+    .sobre-nos .main .content-sobre p {
+        width: 400px;
+    }
+
+    .sobre-nos .main img {
+        width: 250px;
+    }
+
+    .contatos .contatos-secao {
+        width: 300px
+    }
+
+}
+
+@media (max-width: 450px){
+    .first-section .main {
+        text-align: center;
+        width: 300px;
+    }
+
+    .first-section .main h1{
+        font-size: 2.4rem;
+    }
+
+    .sobre-nos .main .content-sobre p {
+        width: 300px;
+    }
+}

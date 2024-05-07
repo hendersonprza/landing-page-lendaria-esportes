@@ -496,9 +496,12 @@ transition: 0.6s;
 }
 
 .contatos-secao{
-    width: 650px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     font-size: 2rem;
 }
 
@@ -506,19 +509,39 @@ transition: 0.6s;
     margin-right: .2rem;
 }
 
-.contatos-secao div a {
+.contatos-secao div a,span, i {
     color: white;
     cursor: pointer;
-    transition: 200ms ease-in;
 }
 
-.contatos-secao div i, span {
-    text-decoration: none;
+.contatos-secao #isa{
+    transition: 400ms ease-out;
 }
 
-.contatos-secao div:hover{
-    color: #ffc506;
+
+.contatos-secao #isa:hover{
+    transform: scale(1.03)translateY(-2px);
 }
+
+.contatos-secao #gabriel{
+    transition: 400ms ease-out;
+}
+
+
+.contatos-secao #gabriel:hover{
+    transform: scale(1.03)translateY(-2px);
+}
+
+.contatos-secao #instagram{
+    transition: 400ms ease-out;
+}
+
+
+.contatos-secao #instagram:hover{
+    transform: scale(1.03)translateY(-2px);
+}
+
+
 
 /* responsividade */
 

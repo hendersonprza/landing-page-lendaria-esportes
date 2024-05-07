@@ -7,5 +7,3 @@ menuToggle.addEventListener('click', () => {
 
     showMenu = !showMenu;
 });
-
-

@@ -409,18 +409,18 @@ transition: 0.6s;
 
 .itens-catalogo .info .catalogo-pdf {
     text-decoration: none;
-    padding-left: 1rem;
+    padding: 0;
     border-radius: 5px;
     color: black;
     font-family: "Indie Flower", cursive;
     font-size: 1.7rem;
     font-weight: 500;
-    width: 200px;
+    width: 150px;
     height: 35px;
-    margin-top: 2rem;
+    margin: 2rem .7rem;
     background-color: #ffc506;
     cursor: pointer;
-    transition: 200ms;
+    transition: 200ms ease;
 }
 
 .itens-catalogo .info .catalogo-pdf:hover{
@@ -734,7 +734,7 @@ transition: 0.6s;
     }
 
     .content.on .list-menu li a {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .content.on .menu-toggle .two{
